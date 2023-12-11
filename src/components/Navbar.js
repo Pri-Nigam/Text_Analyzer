@@ -1,13 +1,12 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import PropTypes from 'prop-types';
 
+
 function NavScrollExample(props) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <Container fluid>
         <Navbar.Brand href="#">{props.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -20,15 +19,10 @@ function NavScrollExample(props) {
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">About</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+            <div class={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+              <input class="form-check-input" type="checkbox" onClick={props.handleMode} role="switch" id="flexSwitchCheckDefault"/>
+              <label class="form-check-label" for="flexSwitchCheckDefault">Enable Dark Mode</label>
+            </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
