@@ -42,7 +42,7 @@ function TextFrom(props) {
       </div>
       <div className="container my-3" style={{color: props.mode==='dark'?'white':'#042743'}}>
         <h3>Text Summary</h3>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{text.split(" ").filter((element) => {return element.length!==0}).length} words and {text.length} characters</p>
         <h3>Preview</h3>
         <p>{text}</p>
       </div>
