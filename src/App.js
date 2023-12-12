@@ -3,6 +3,7 @@ import TextForm from './components/TextFrom'
 import './App.css';
 import About from './components/About';
 import { useState } from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   const [mode,setMode] = useState('light');
@@ -20,10 +21,13 @@ function App() {
   return (
     <>
       <Navbar title="Text App" mode={mode} handleMode={handleMode}/>
-      {/* <Navbar/> */}
       <div className='container my-3'>
-        <TextForm heading='Enter text to analyze'mode={mode}/>
-        {/* <About/> */}
+        <Router>
+          <Routes>
+            <Route path='/' element={<TextForm heading='Enter text to analyze'mode={mode}/>}></Route>
+            <Route path='/About' element={<About/>}></Route>
+          </Routes>
+        </Router>
       </div>
     </>
   );

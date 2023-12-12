@@ -8,7 +8,7 @@ function NavScrollExample(props) {
   return (
     <Navbar className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <Container fluid>
-        <Navbar.Brand href="#">{props.title}</Navbar.Brand>
+        <Navbar.Brand href="/">{props.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -16,8 +16,8 @@ function NavScrollExample(props) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/About">About</Nav.Link>
           </Nav>
             <div class={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
               <input class="form-check-input" type="checkbox" onClick={props.handleMode} role="switch" id="flexSwitchCheckDefault"/>

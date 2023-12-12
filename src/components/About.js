@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function About() {
   const [myStyle,setMyStyle] = useState({
-    color: 'black',
+    color: '#696969',
     backgroundColor: 'white'
   });
 
@@ -11,7 +11,7 @@ function About() {
   const handleMode = () => {
    if (myStyle.color == 'white'){
     setMyStyle({
-      color: 'black',
+      color: '#696969',
       backgroundColor: 'white',
       border: '1px solid white'
     })
@@ -20,7 +20,7 @@ function About() {
    else{
     setMyStyle({
       color: 'white',
-      backgroundColor: 'black '
+      backgroundColor: '#696969 '
     })
     setBtnText('Disable Dark Mode');
    }
