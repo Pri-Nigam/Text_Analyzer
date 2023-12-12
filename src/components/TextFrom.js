@@ -31,7 +31,7 @@ function TextFrom(props) {
       <div className='container' style={{color: props.mode==='dark'?'white':'#042743'}}>
         <h2>{props.heading}</h2>
         <div className="mb-3">
-          <textarea className="form-control" value={text} onChange={handleChange} style={{backgroundColor: props.mode==='dark'?'#13466e':'white', color: props.mode==='dark'?'white':'#042743'}} id="mytext" rows="8"></textarea>
+          <textarea className="form-control" value={text} onChange={handleChange} style={{backgroundColor: props.mode==='dark'?'#696969':'white', color: props.mode==='dark'?'white':'#042743'}} id="mytext" rows="8"></textarea>
         </div>
         <div className="button">
           <button className="btn btn-primary" onClick={handleUpcase}>Change to UpperCase</button>
